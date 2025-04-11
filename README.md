@@ -1,43 +1,63 @@
 # HTML Splitter
 
-## Estructura del Proyecto
+A tool for extracting CSS from HTML files and separating them into individual files.
+
+## Project Structure
 
 ```
 html-splitter/
-├── src/                    # Código fuente principal
-│   ├── index.js           # Punto de entrada principal
-│   └── utils/             # Utilidades y helpers
+├── src/                    # Source code
+│   └── index.js           # Main CSS extraction script
 ├── tests/                 # Tests
-│   ├── unit/             # Tests unitarios
-│   └── integration/      # Tests de integración
-├── scripts/              # Scripts de utilidad
-├── config/               # Archivos de configuración
-├── docs/                 # Documentación
-├── public/               # Archivos estáticos
+│   ├── unit/             # Unit tests
+│   └── integration/      # Integration tests
+├── config/               # Configuration files
+├── docs/                 # Documentation
+├── public/               # Static files
 ├── package.json
 └── README.md
 ```
 
-## Instalación
+## Installation
 
 ```bash
 npm install
 ```
 
-## Uso
+## Usage
+
+To extract CSS from HTML files:
 
 ```bash
-npm start
+# Using npm script
+npm run extract
+
+# Or directly with node
+node src/index.js [input_directory] [output_directory]
 ```
 
-## Desarrollo
+### Parameters
+
+- `input_directory`: Directory containing HTML files (optional, default: current directory)
+- `output_directory`: Directory where processed files will be saved (optional, default: ./output)
+
+## Development
 
 ```bash
 npm run dev
 ```
 
-## Tests
+## Testing
 
 ```bash
 npm test
-``` 
+```
+
+## Features
+
+- Extracts CSS from HTML files
+- Creates separate CSS files
+- Updates HTML files to reference external CSS
+- Recursively processes directories
+- Handles multiple HTML files
+- Preserves original file structure 
