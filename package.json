@@ -1,0 +1,23 @@
+{
+  "name": "html-splitter",
+  "version": "1.0.0",
+  "description": "HTML Splitter tool for extracting and testing UI components",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/unit/",
+    "test:integration": "node --test tests/integration/",
+    "extract-css": "node scripts/extract-css.js",
+    "test-visual": "node scripts/tests/test-visual.js"
+  },
+  "dependencies": {
+    "jsdom": "^26.0.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.42.1",
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0"
+  }
+}
